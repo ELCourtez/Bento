@@ -60,7 +60,7 @@ const CONFIG = {
 		{
 			id: '2',
 			name: 'Tasks',
-			icon: 'list-todos',
+			icon: 'check',
 			link: 'https://cloud.woodphant.fr/apps/tasks/',
 		},
 		{
