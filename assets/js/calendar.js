@@ -22,9 +22,7 @@ function getCalendar(latitude, longitude) {
 	let api = `https://cloud.woodphant.fr/remote.php/dav/calendars/jbenard/28c6e092-8c4b-4698-a8e4-713d4ca6894c/?export&accept=jcal`;
 	fetch(api, requestOptions)
 		.then(function(response) {
-			console.log(response);
 			let data = response.json();
-			console.log(data);
 			return data;
 		})
 		.then(function(data) {
@@ -42,7 +40,6 @@ function getCalendar(latitude, longitude) {
 			});
 			my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
 			my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
-			console.log(my_events);
 		});
 }
 
