@@ -25,7 +25,7 @@ function getCalendar(latitude, longitude) {
 			return data;
 		})
 		.then(function(data) {
-			console.log(data);
+			console.log(data[2]);
 		});
 }
 
