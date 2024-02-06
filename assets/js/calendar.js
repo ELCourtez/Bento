@@ -72,7 +72,7 @@ function getCalendar(latitude, longitude) {
 		        </div>
 		      `;
 				const position = 'beforeend';
-				lists_1.insertAdjacentHTML(position, item);
+				listscal_1.insertAdjacentHTML(position, item);
 		});
 }
 
