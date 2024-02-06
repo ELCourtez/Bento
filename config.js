@@ -46,6 +46,10 @@ const CONFIG = {
 	hourDarkThemeActive: '18:30',
 	hourDarkThemeInactive: '07:00',
 
+	// Nextcloud Calendar
+	calendarKey : 'amJlbmFyZDoxakJHX3UxNEpvc1Q5QzE=',
+	calendarURI : 'https://cloud.woodphant.fr/remote.php/dav/calendars/jbenard/28c6e092-8c4b-4698-a8e4-713d4ca6894c/?export&accept=jcal',
+
 	// ┌┐ ┬ ┬┌┬┐┌┬┐┌─┐┌┐┌┌─┐
 	// ├┴┐│ │ │  │ │ ││││└─┐
 	// └─┘└─┘ ┴  ┴ └─┘┘└┘└─┘
