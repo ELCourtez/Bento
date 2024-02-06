@@ -53,22 +53,22 @@ function getCalendar(latitude, longitude) {
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[0]['summary']}</a>
+		          >PLOP</a>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[1]['summary']}</a>
+		          >plop</a>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[2]['summary']}</a>
+		          >plop</a>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[3]['summary']}</a>
+		          >PLIP</a>
 		        </div>
 		      `;
 				const position = 'beforeend';
