@@ -48,7 +48,7 @@ function getCalendar(latitude, longitude) {
 		.then(function(){
 				let item = `
 		        <div class="card list list__1" id="list_1">
-		          <i class="listIcon" icon-name="agenda"></i>
+		          <i class="listIcon" icon-name="calendar"></i>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
