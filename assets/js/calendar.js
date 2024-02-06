@@ -34,7 +34,7 @@ function getCalendar(latitude, longitude) {
 			vevents.forEach(function (item) {
 			  item[1].forEach(function(variable){
 				if(variable[0] === 'summary' || variable[0] === 'location' || variable[0] === 'dtstart'){
-				  	my_events[variable[0]]=variable[3];
+				  	my_events[i][variable[0]]=variable[3];
 					console.log(i + " : " + variable[0] + ' = ' + variable[3]);
 				}
 			  });
