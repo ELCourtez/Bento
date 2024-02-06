@@ -41,6 +41,7 @@ function getCalendar(latitude, longitude) {
 			i = i+1;
 			});
 			my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
+			my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
 			console.log(my_events);
 		});
 }
