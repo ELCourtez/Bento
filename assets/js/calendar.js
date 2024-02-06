@@ -30,13 +30,15 @@ function getCalendar(latitude, longitude) {
 		.then(function(data) {
 			let vevents = data[2].filter(element => element[0] === 'vevent' );
 			let my_events = [];
+			let i = 0;
 			vevents.forEach(function (item) {
 			  item[1].forEach(function(variable){
 				if(variable[0] === 'summary' || variable[0] === 'location' || variable[0] === 'dtstart'){
-				  	my_events[variable[0]]=variable[3];
+				  	my_events[i][variable[0]]=variable[3];
 					console.log(variable[0] + ' = ' + variable[3]);
 				}
 			  });
+			i = i+1;
 			});
 			console.log(my_events);
 		});
