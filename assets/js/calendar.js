@@ -38,8 +38,7 @@ function getCalendar(latitude, longitude) {
 				}
 			  });
 			});
-			console.log(data[2]);
-			console.log(vevents);
+			console.log(my_events);
 		});
 }
 
