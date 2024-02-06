@@ -20,4 +20,4 @@
             .catch(error => console.log('error', error));
 
             console.log("test");
-            console.log(mycalendar);
+            console.log(result);
