@@ -28,7 +28,7 @@ function getCalendar(latitude, longitude) {
 			return data;
 		})
 		.then(function(data) {
-			let vevents = data[2].filter(element => element[0] === 'VEVENT' )
+			let vevents = data[2].filter(element => element[0] === 'vevent' )
 			console.log(data[2]);
 			console.log(vevents);
 		});
