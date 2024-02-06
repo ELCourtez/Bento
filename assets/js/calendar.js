@@ -40,7 +40,7 @@ function getCalendar(latitude, longitude) {
 			  });
 			i = i+1;
 			});
-			my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
+			my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
 			console.log(my_events[0]['summary'] + ' : ' + my_events[0]['dtstart']);
 		});
 }
