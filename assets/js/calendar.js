@@ -22,12 +22,13 @@ function getCalendar(latitude, longitude) {
 	let api = `https://cloud.woodphant.fr/remote.php/dav/calendars/jbenard/28c6e092-8c4b-4698-a8e4-713d4ca6894c/?export&accept=jcal`;
 	fetch(api, requestOptions)
 		.then(function(response) {
+			console.log(response);
 			let data = response.json();
+			console.log(data);
 			return data;
 		})
 		.then(function(data) {
 			console.log(data[2]);
-			console.log(JSON.parse(data[2]));
 		});
 }
 
