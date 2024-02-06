@@ -27,6 +27,12 @@ const generateLayout = () => {
 			linksBlock.classList.remove('reduceGap');
 			linksBlock.classList.remove('removeGap');
 			break;
+		case 'bentocalendar':
+			linksBlockLeft.insertAdjacentHTML(position, firstButtonsContainer);
+			linksBlockRight.insertAdjacentHTML(position, firstListsContainerCalendar);
+			linksBlock.classList.remove('reduceGap');
+			linksBlock.classList.remove('removeGap');
+			break;
 		case 'lists':
 			linksBlockLeft.insertAdjacentHTML(position, firstListsContainer);
 			linksBlockRight.insertAdjacentHTML(position, secondListsContainer);
