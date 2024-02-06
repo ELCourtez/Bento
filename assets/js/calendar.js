@@ -1,3 +1,4 @@
+/**/
 var agenda = getCalendar();
 
 function getCalendar(latitude, longitude) {
