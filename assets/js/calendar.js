@@ -14,10 +14,12 @@
             redirect: 'follow'
             };
 
+            var calendar = '';
+
             var mycalendar = fetch("https://cloud.woodphant.fr/remote.php/dav/calendars/jbenard/28c6e092-8c4b-4698-a8e4-713d4ca6894c/?export&accept=jcal", requestOptions)
             .then(response => response.text())
-            .then(result => console.log(result))
+            .then(result => calendar = result)
             .catch(error => console.log('error', error));
 
             console.log("test");
-            console.log(result);
+            console.log(calendar);
