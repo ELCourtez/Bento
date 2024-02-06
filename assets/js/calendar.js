@@ -1,13 +1,3 @@
-
-const iconElement = document.querySelector('.weatherIcon');
-const tempElement = document.querySelector('.weatherValue p');
-const descElement = document.querySelector('.weatherDescription p');
-
-const weather = {};
-weather.temperature = {
-	unit: 'celsius',
-};
-
 getCalendar();
 
 function getCalendar(latitude, longitude) {
