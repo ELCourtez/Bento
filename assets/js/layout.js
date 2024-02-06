@@ -15,7 +15,7 @@ const generateLayout = () => {
   `;
 
 	let firstListsContainer = `
-    <div class="listsContainerCalendar" id="lists_1"></div>
+    <div class="listsContainerCalendar" id="listscal_1"></div>
   `;
 
 	let secondListsContainer = `
