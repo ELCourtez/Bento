@@ -48,7 +48,7 @@ function getCalendar(latitude, longitude) {
 		.then(function(){
 				let item = `
 		        <div class="card list list__1" id="list_1">
-		          <i class="listIcon" icon-name="${list.icon}"></i>
+		          <i class="listIcon" icon-name="agenda"></i>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
@@ -58,17 +58,17 @@ function getCalendar(latitude, longitude) {
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[0]['summary']}</a>
+		          >${my_events[1]['summary']}</a>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[0]['summary']}</a>
+		          >${my_events[2]['summary']}</a>
 		          <a
 		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		          href="#"
 		          class="listItem"
-		          >${my_events[0]['summary']}</a>
+		          >${my_events[3]['summary']}</a>
 		        </div>
 		      `;
 				const position = 'beforeend';
