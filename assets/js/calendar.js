@@ -1,4 +1,4 @@
-getCalendar();
+var agenda = getCalendar();
 
 function getCalendar(latitude, longitude) {
             var myHeaders = new Headers();
@@ -26,6 +26,7 @@ function getCalendar(latitude, longitude) {
 		})
 		.then(function(data) {
 			console.log(data[2]);
+			return data
 		});
 }
 
