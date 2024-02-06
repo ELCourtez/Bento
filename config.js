@@ -139,7 +139,7 @@ const CONFIG = {
 	// First Links Container
 	firstlistsContainer: [
 		{
-			icon: 'calendat',
+			icon: 'calendar',
 			id: '1',
 			links: [
 				{
