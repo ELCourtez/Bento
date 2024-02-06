@@ -1,5 +1,5 @@
 /**/
-var agenda = getCalendar();
+getCalendar();
 
 function getCalendar(latitude, longitude) {
             var myHeaders = new Headers();
@@ -20,7 +20,7 @@ function getCalendar(latitude, longitude) {
 			
 
 	let api = `https://cloud.woodphant.fr/remote.php/dav/calendars/jbenard/28c6e092-8c4b-4698-a8e4-713d4ca6894c/?export&accept=jcal`;
-	let myagenda = fetch(api, requestOptions)
+	fetch(api, requestOptions)
 		.then(function(response) {
 			console.log(response);
 			let data = response.json();
@@ -30,7 +30,6 @@ function getCalendar(latitude, longitude) {
 		.then(function(data) {
 			console.log(data[2]);
 		});
-	return myagenda;
 }
 
 function displayCalendar() {
