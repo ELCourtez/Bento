@@ -14,6 +14,10 @@ const generateLayout = () => {
     <div class="listsContainer" id="lists_1"></div>
   `;
 
+	let firstListsContainer = `
+    <div class="listsContainerCalendar" id="lists_1"></div>
+  `;
+
 	let secondListsContainer = `
     <div class="listsContainer" id="lists_2"></div>
   `;
