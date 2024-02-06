@@ -32,9 +32,9 @@ function getCalendar(latitude, longitude) {
 			let my_events = [];
 			let i = 0;
 			vevents.forEach(function (item) {
+	    		  my_events[i]=[];
 			  item[1].forEach(function(variable){
 				if(variable[0] === 'summary' || variable[0] === 'dtstart'){
-				  	my_events[i]=[];
 					my_events[i][variable[0]]=variable[3];
 					console.log(i + " : " + variable[0] + ' = ' + variable[3]);
 				}
