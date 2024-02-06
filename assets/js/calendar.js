@@ -44,7 +44,36 @@ function getCalendar(latitude, longitude) {
 			my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
 			my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
 			console.log(my_events);
-		});
+		})
+		.then(
+				let item = `
+		        <div class="card list list__1" id="list_1">
+		          <i class="listIcon" icon-name="${list.icon}"></i>
+		          <a
+		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+		          href="#"
+		          class="listItem"
+		          >` + my_events[0]['summary'] + `</a>
+		          <a
+		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+		          href="#"
+		          class="listItem"
+		          >` + my_events[1]['summary'] + `</a>
+		          <a
+		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+		          href="#"
+		          class="listItem"
+		          >` + my_events[2]['summary'] + `</a>
+		          <a
+		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+		          href="#"
+		          class="listItem"
+		          >` + my_events[3]['summary'] + `</a>
+		        </div>
+		      `;
+				const position = 'beforeend';
+				lists_1.insertAdjacentHTML(position, item);
+		);
 }
 
 function displayCalendar() {
