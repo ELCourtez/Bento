@@ -45,7 +45,7 @@ function getCalendar(latitude, longitude) {
 			my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
 			console.log(my_events);
 		})
-		.then(
+		.then(function(){
 				let item = `
 		        <div class="card list list__1" id="list_1">
 		          <i class="listIcon" icon-name="${list.icon}"></i>
@@ -73,7 +73,7 @@ function getCalendar(latitude, longitude) {
 		      `;
 				const position = 'beforeend';
 				lists_1.insertAdjacentHTML(position, item);
-		);
+		});
 }
 
 function displayCalendar() {
