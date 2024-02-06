@@ -36,12 +36,11 @@ function getCalendar(latitude, longitude) {
 			  item[1].forEach(function(variable){
 				if(variable[0] === 'summary' || variable[0] === 'dtstart'){
 					my_events[i][variable[0]]=variable[3];
-					console.log(i + " : " + variable[0] + ' = ' + variable[3]);
 				}
 			  });
 			i = i+1;
 			});
-			console.log(my_events);
+			console.log(my_events[0]['summary'] + ' : ' + my_events[0]['dtstart']);
 		});
 }
 
