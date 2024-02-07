@@ -1,8 +1,8 @@
 /**/
-const my_events = {};
+const calendar = {};
 setCalendar();
 
-function setcalendar() {
+function setCalendar() {
 	getCalendar(CONFIG.defaultLatitude, CONFIG.defaultLongitude);
 	return;
 }
@@ -49,6 +49,7 @@ function getCalendar() {
 			});
 			my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
 			my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
+			calendar.events = my_events;
 		})
 		.then(function(){
 			displayCalendar();
@@ -56,5 +57,5 @@ function getCalendar() {
 }
 
 function displayCalendar() {
-	console.log(my_events);
+	console.log(calendar);
 }
