@@ -1,6 +1,6 @@
 /**/
 getCalendar();
-
+const my_events = {};
 function getCalendar(latitude, longitude) {
             var myHeaders = new Headers();
 	    const key = `${CONFIG.calendarKey}`;
@@ -43,41 +43,12 @@ function getCalendar(latitude, longitude) {
 			});
 			my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
 			my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
-			console.log(my_events);
 		})
 		.then(function(){
-				let item = `
-		        <div class="card list list__1" id="list_1">
-		          <i class="listIcon" icon-name="calendar"></i>
-		          <a
-		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		          href="#"
-		          class="listItem"
-		          >PLOP</a>
-		          <a
-		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		          href="#"
-		          class="listItem"
-		          >plop</a>
-		          <a
-		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		          href="#"
-		          class="listItem"
-		          >plop</a>
-		          <a
-		          target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		          href="#"
-		          class="listItem"
-		          >PLIP</a>
-		        </div>
-		      `;
-				const position = 'beforeend';
-				/*listscal_1.insertAdjacentHTML(position, item);*/
+			displayCalendar();
 		});
 }
 
 function displayCalendar() {
-	iconElement.innerHTML = `<img src="assets/icons/${CONFIG.weatherIcons}/${weather.iconId}.png"/>`;
-	tempElement.innerHTML = `${weather.temperature.value.toFixed(0)}°<span class="darkfg">${tempUnit}</span>`;
-	descElement.innerHTML = weather.description;
+	console.log(my_events);
 }
