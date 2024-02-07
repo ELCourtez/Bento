@@ -74,22 +74,22 @@ const generateFirstListsContainerCalendar = () => {
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="#"
 		class="listItem"
-		>${(new Date(calendar.events[0].dtstart)).getDate()} ${calendar.events[0].summary}</a>
+		><span>${(new Date(calendar.events[0].dtstart)).getDate()}/${(new Date(calendar.events[0].dtstart)).getMonth()}</span><span>${calendar.events[0].summary}</span></a>
 		<a
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="#"
 		class="listItem"
-		>${calendar.events[1].summary}</a>
+		><span>${(new Date(calendar.events[1].dtstart)).getDate()}/${(new Date(calendar.events[1].dtstart)).getMonth()}</span><span>${calendar.events[1].summary}</span></a>
 		<a
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="#"
 		class="listItem"
-		>${calendar.events[2].summary}</a>
+		><span>${(new Date(calendar.events[2].dtstart)).getDate()}/${(new Date(calendar.events[2].dtstart)).getMonth()}</span><span>${calendar.events[2].summary}</span></a>
 		<a
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="#"
 		class="listItem"
-		>${calendar.events[3].summary}</a>
+		><span>${(new Date(calendar.events[3].dtstart)).getDate()}/${(new Date(calendar.events[3].dtstart)).getMonth()}</span><span>${calendar.events[3].summary}</span></a>
 		</div>
 	`;
 	const position = 'beforeend';
