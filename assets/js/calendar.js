@@ -3,7 +3,7 @@ getCalendar();
 lucide.createIcons();
 
 function getCalendar() {
-	var myHeaders = new Headers();
+	var Headers = new Headers();
 	const key = `${CONFIG.calendarKey}`;
 	const uri = `${CONFIG.calendarURI}remote.php/dav/calendars/${CONFIG.calendarUser}/${CONFIG.calendarUID}/?export&accept=jcal`;
 	myHeaders.append("Authorization", "Basic " + key);
@@ -11,11 +11,10 @@ function getCalendar() {
 	
 	var requestOptions = {
 	    method: 'GET',
-	    headers: myHeaders,
+	    headers: Headers,
 	    redirect: 'follow'
 	};
-	
-	
+		
 	let api = uri;
 	fetch(api, requestOptions)
 	.then(function(response) {
@@ -41,7 +40,6 @@ function getCalendar() {
 
 		let vtodos = data[2].filter(element => element[0] === 'vtodo' );
 		let my_todos = [];		
-		console.log(vevents);
 		let j = 0;
 		vtodos.forEach(function (item) {
 			my_todos[j]=[];
@@ -56,7 +54,6 @@ function getCalendar() {
 		my_todos = my_todos.filter(element => element['related-to'] === todo_uid && element['status']!== 'COMPLETED');
 		my_todos = my_todos.sort((alement, blement) => Date.parse(blement['created']) - Date.parse(alement['created']));
 		calendar.todos = my_todos;
-		console.log(calendar);
 	})
 	.then(function(){
 		if(CONFIG.bentoLayout === 'bentocalendar'){
