@@ -116,8 +116,8 @@ const generateFirstListsContainerCalendar = () => {
 	`;
 	lists_1.insertAdjacentHTML(position, item2);*/
 	let item2 =`
-		<div class="agenda card list list__1" id="list_1">
-		<i class="listIcon" data-lucide="calendar"></i>`;
+		<div class="agenda card list list__2" id="list_2">
+		<i class="listIcon" data-lucide="check"></i>`;
   		for(let i = 0; i < Math.min(4, calendar.todos.length); i++){
 			item2 = item2 + `<a style="display:flex;"
 			target="${CONFIG.openInNewTab ? '_blank' : ''}"
