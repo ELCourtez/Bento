@@ -103,9 +103,6 @@ const generateLists = () => {
 		case 'bento':
 			generateFirstListsContainer();
 			break;
-		case 'bentocalendar':
-			generateFirstListsContainerCalendar();
-			break;
 		case 'lists':
 			generateFirstListsContainer();
 			generateSecondListsContainer();
