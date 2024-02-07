@@ -52,8 +52,8 @@ function getCalendar() {
 			});
 			j = j+1;
 		});
-		my_todos = my_events.filter(element => Date.parse(element['created']) > Date.now());
-		my_todos = my_events.sort((alement, blement) => Date.parse(alement['created']) - Date.parse(blement['created']));
+		my_todos = my_todos.filter(element => Date.parse(element['created']) > Date.now());
+		my_todos = my_todos.sort((alement, blement) => Date.parse(alement['created']) - Date.parse(blement['created']));
 		calendar.todos = my_todos;
 		console.log(calendar);
 	})
