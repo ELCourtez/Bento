@@ -73,7 +73,7 @@ function getCalendar() {
 const generateFirstListsContainerCalendar = () => {
 	let item =`
 		<div class="agenda card list list__1" id="list_1">
-		<i class="listIcon" icon-name="calendar"></i>`;
+		<i class="listIcon" data-lucide="calendar"></i>`;
   		for(let i = 0; i < 4; i++){
 			item = item + `<a style="display:flex;"
 			target="${CONFIG.openInNewTab ? '_blank' : ''}"
@@ -91,7 +91,7 @@ const generateFirstListsContainerCalendar = () => {
 	lists = CONFIG.firstlistsContainer;
 	let item2 = `
 		<div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
-		<i class="listIcon" icon-name="${lists[1].icon}"></i>
+		<i class="listIcon" data-lucide="${lists[1].icon}"></i>
 		<a
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="${lists[1].links[0].link}"
