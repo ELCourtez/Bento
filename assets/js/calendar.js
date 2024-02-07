@@ -121,7 +121,7 @@ const generateFirstListsContainerCalendar = () => {
   		for(let i = 0; i < Math.min(4, calendar.todos.length); i++){
 			item2 = item2 + `<a style="display:flex;"
 			target="${CONFIG.openInNewTab ? '_blank' : ''}"
-			href="#"
+			href="${CONFIG.calendarURI}apps/tasks/#/calendars/${CONFIG.calendarUID}/tasks/${calendar.todos[i].uid}.ics"
 			class="listItem">
 				<span class="event-name">${(calendar.todos[i].summary).substring(0, 20)}</span>
       		</a>`;
