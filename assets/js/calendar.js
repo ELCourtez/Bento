@@ -46,14 +46,14 @@ function getCalendar() {
 		vtodos.forEach(function (item) {
 			my_todos[j]=[];
 			item[1].forEach(function(variable){
-				if(variable[0] === 'summary' || variable[0] === 'created' || variable[0] === 'uid' || variable[0] === 'related-to' || variable[0] === 'priority'){
+				if(variable[0] === 'summary' || variable[0] === 'created' || variable[0] === 'uid' || variable[0] === 'related-to' || variable[0] === 'priority' || variable[0] === 'status'){
 					my_todos[j][variable[0]]=variable[3];
 				}
 			});
 			j = j+1;
 		});
 		let todo_uid = (my_todos.find(element => (element['summary']).toUpperCase() === 'TODO'))['uid'];
-		my_todos = my_todos.filter(element => element['related-to'] === todo_uid);
+		my_todos = my_todos.filter(element => element['related-to'] === todo_uid && element['status']!=== 'COMPLETED');
 		my_todos = my_todos.sort((alement, blement) => Date.parse(blement['created']) - Date.parse(alement['created']));
 		calendar.todos = my_todos;
 		console.log(calendar);
