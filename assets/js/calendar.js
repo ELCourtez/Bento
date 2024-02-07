@@ -24,7 +24,10 @@ function getCalendar() {
 	})
 	.then(function(data) {
 		let vevents = data[2].filter(element => element[0] === 'vevent' );
+		let vtodos = data[2].filter(element => element[0] === 'vtodo' );
+		console.log(vtodos);
 		let my_events = [];
+		let my_todos = [];
 		let i = 0;
 		vevents.forEach(function (item) {
 			my_events[i]=[];
