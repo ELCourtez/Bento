@@ -77,7 +77,7 @@ const generateFirstListsContainerCalendar = () => {
 			class="listItem"
 			><span>${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span><span>${calendar.events[i].summary}</span></a>`;
   		}
-		</div>
+		item = `</div>
 	`;
 	const position = 'beforeend';
 	lists_1.insertAdjacentHTML(position, item);
