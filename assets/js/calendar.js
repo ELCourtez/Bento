@@ -74,8 +74,10 @@ const generateFirstListsContainerCalendar = () => {
 			item = item + `<a style="display:flex;"
 			target="${CONFIG.openInNewTab ? '_blank' : ''}"
 			href="#"
-			class="listItem"
-			><span style="padding-right:5px;">${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span><span>${calendar.events[i].summary}</span></a>`;
+			class="listItem">
+   			<span class="event-date" style="padding-right:5px;">${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span>
+   			<span class="event-name">${calendar.events[i].summary}</span>
+      			</a>`;
   		}
 		item = item + `</div>
 	`;
