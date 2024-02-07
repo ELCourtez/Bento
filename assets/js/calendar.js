@@ -41,7 +41,7 @@ function getCalendar() {
 
 		let vtodos = data[2].filter(element => element[0] === 'vtodo' );
 		let my_todos = [];		
-		console.log(vtodos);
+		console.log(vevents);
 		let j = 0;
 		vtodos.forEach(function (item) {
 			my_todos[j]=[];
@@ -53,7 +53,7 @@ function getCalendar() {
 			j = j+1;
 		});
 		let todo_uid = (my_todos.find(element => (element['summary']).toUpperCase() === 'TODO'))['uid'];
-		my_todos = my_todos.filter(element => element['related-to'] === todo_uid && element['status']!=== 'COMPLETED');
+		my_todos = my_todos.filter(element => element['related-to'] === todo_uid && element['status']!== 'COMPLETED');
 		my_todos = my_todos.sort((alement, blement) => Date.parse(blement['created']) - Date.parse(alement['created']));
 		calendar.todos = my_todos;
 		console.log(calendar);
