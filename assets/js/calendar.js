@@ -112,6 +112,5 @@ const generateFirstListsContainerCalendar = () => {
 	  >${lists[1].links[3].name}</a>
 	</div>
       `;
-	const position = 'beforeend';
 	lists_1.insertAdjacentHTML(position, item2);
 };
