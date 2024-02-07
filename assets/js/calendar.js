@@ -76,7 +76,7 @@ const generateFirstListsContainerCalendar = () => {
 			href="#"
 			class="listItem">
    			<span class="event-date" style="padding-right:5px;">${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span>
-   			<span class="event-name">${calendar.events[i].summary}</span>
+   			<span class="event-name">${(calendar.events[i].summary).substring(0, 20)}</span>
       			</a>`;
   		}
 		item = item + `</div>
