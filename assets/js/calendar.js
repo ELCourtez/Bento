@@ -71,13 +71,13 @@ const generateFirstListsContainerCalendar = () => {
 		<div class="card list list__1" id="list_1">
 		<i class="listIcon" icon-name="calendar"></i>`;
   		for(let i = 0; i < 4; i++){
-			item=`<a
+			item = item + `<a
 			target="${CONFIG.openInNewTab ? '_blank' : ''}"
 			href="#"
 			class="listItem"
 			><span>${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span><span>${calendar.events[i].summary}</span></a>`;
   		}
-		item = `</div>
+		item = item + `</div>
 	`;
 	const position = 'beforeend';
 	lists_1.insertAdjacentHTML(position, item);
