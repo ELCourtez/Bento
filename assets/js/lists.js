@@ -67,10 +67,45 @@ const generateSecondListsContainer = () => {
 	}
 };
 
+const generateFirstListsContainerCalendar = () => {
+	
+	lists = ${CONFIG.firstlistsContainer};
+		let item = `
+        <div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
+          <i class="listIcon" icon-name="${lists[1].icon}"></i>
+          <a
+          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+          href="${lists[1].links[0].link}"
+          class="listItem"
+          >${lists[1].links[0].name}</a>
+          <a
+          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+          href="${lists[1].links[1].link}"
+          class="listItem"
+          >${lists[1].links[1].name}</a>
+          <a
+          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+          href="${lists[1].links[2].link}"
+          class="listItem"
+          >${lists[1].links[2].name}</a>
+          <a
+          target="${CONFIG.openInNewTab ? '_blank' : ''}"
+          href="${lists[1].links[3].link}"
+          class="listItem"
+          >${lists[1].links[3].name}</a>
+        </div>
+      `;
+		const position = 'beforeend';
+		lists_1.insertAdjacentHTML(position, item);	
+};
+
 const generateLists = () => {
 	switch (CONFIG.bentoLayout) {
 		case 'bento':
 			generateFirstListsContainer();
+			break;
+		case 'bentocalendar':
+			generateFirstListsContainerCalendar();
 			break;
 		case 'lists':
 			generateFirstListsContainer();
