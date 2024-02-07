@@ -48,7 +48,8 @@ const CONFIG = {
 
 	// Nextcloud Calendar
 	calendarKey : 'amJlbmFyZDoxakJHX3UxNEpvc1Q5QzE=',
-	calendarURI : 'https://cloud.woodphant.fr/remote.php/dav/calendars/jbenard/28c6e092-8c4b-4698-a8e4-713d4ca6894c/?export&accept=jcal',
+	calendarURI : 'https://cloud.woodphant.fr/',
+	calendarUID : '28c6e092-8c4b-4698-a8e4-713d4ca6894c'
 
 	// ┌┐ ┬ ┬┌┬┐┌┬┐┌─┐┌┐┌┌─┐
 	// ├┴┐│ │ │  │ │ ││││└─┐
