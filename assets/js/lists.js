@@ -67,7 +67,7 @@ const generateSecondListsContainer = () => {
 	}
 };
 
-const generateFirstListsContainerCalendar = () => {
+const generateFirstListsContainerCalendar2 = () => {
 	lists = CONFIG.firstlistsContainer;
 		let item = `
 	<div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
