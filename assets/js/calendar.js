@@ -5,7 +5,7 @@ lucide.createIcons();
 function getCalendar() {
 	var myHeaders = new Headers();
 	const key = `${CONFIG.calendarKey}`;
-	const uri = `${CONFIG.calendarURI}`;
+	const uri = `${CONFIG.calendarURI}remote.php/dav/calendars/${CONFIG.calendarUser}/${CONFIG.calendarUID}/?export&accept=jcal`;
 	myHeaders.append("Authorization", "Basic " + key);
 	myHeaders.append("Content-Type", "application/json");
 	
