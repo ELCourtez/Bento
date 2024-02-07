@@ -52,7 +52,7 @@ function getCalendar() {
 			});
 			j = j+1;
 		});
-		my_todos = my_todos.sort((alement, blement) => Date.parse(alement['created']) - Date.parse(blement['created']));
+		my_todos = my_todos.sort((alement, blement) => Date.parse(blement['created']) - Date.parse(alement['created']));
 		calendar.todos = my_todos;
 		console.log(calendar);
 	})
