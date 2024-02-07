@@ -4,19 +4,17 @@ getCalendar();
 
 
 function getCalendar() {
-            var myHeaders = new Headers();
+	    var myHeaders = new Headers();
 	    const key = `${CONFIG.calendarKey}`;
 	    const uri = `${CONFIG.calendarURI}`;
-	    console.log(key);
-            myHeaders.append("Authorization", "Basic " + key);
-            //myHeaders.append("Cookie", "cookie_test=test; __Host-nc_sameSiteCookielax=true; __Host-nc_sameSiteCookiestrict=true; oc_sessionPassphrase=RoJZ1ye9HwatXWr9VaihFKLwPjOGrdlqzRCn7ajz06c5hyKT%2Bc6NhH8AOpLz%2BIkdd6M1A0TJGh9GsNrGbgYJlT5ppNRJUh9LOUJcDWiJKdm4zk7iQLIfo8FBEZDkkWmA; ocjug6sjwdyv=n0nf2t9bpke8o9f31nhjs0uc9v");
-            myHeaders.append("Content-Type", "application/json");
-
-            var requestOptions = {
-            method: 'GET',
-            headers: myHeaders,
-            redirect: 'follow'
-            };
+	    myHeaders.append("Authorization", "Basic " + key);
+	    myHeaders.append("Content-Type", "application/json");
+	
+	    var requestOptions = {
+	    method: 'GET',
+	    headers: myHeaders,
+	    redirect: 'follow'
+	    };
 			
 
 	let api = uri;
@@ -48,6 +46,8 @@ function getCalendar() {
 			}
 		});
 }
+
+
 const generateFirstListsContainerCalendar = () => {
 	let item =`
 		<div class="card list list__1" id="list_1">
