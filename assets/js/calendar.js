@@ -87,7 +87,7 @@ const generateFirstListsContainerCalendar = () => {
 		lists_1.insertAdjacentHTML(position, item);
 
 	lists = CONFIG.firstlistsContainer;
-		let item = `
+		let item2 = `
 	<div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
 	  <i class="listIcon" icon-name="${lists[1].icon}"></i>
 	  <a
@@ -113,5 +113,5 @@ const generateFirstListsContainerCalendar = () => {
 	</div>
       `;
 	const position = 'beforeend';
-	lists_1.insertAdjacentHTML(position, item);
+	lists_1.insertAdjacentHTML(position, item2);
 };
