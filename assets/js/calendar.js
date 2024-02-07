@@ -1,6 +1,6 @@
 const calendar = {};
 getCalendar();
-
+lucide.createIcons();
 
 function getCalendar() {
 	var myHeaders = new Headers();
