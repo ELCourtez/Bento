@@ -58,10 +58,7 @@ function getCalendar() {
 		});
 }
 const generateFirstListsContainerCalendar = () => {
-
-	for (let i = 0; i < 4; i++) 
-	{
-			let item = `
+	let item =`
 		<div class="card list list__1" id="list_1">
 		  <i class="listIcon" icon-name="calendar"></i>
 		  <a
@@ -86,34 +83,6 @@ const generateFirstListsContainerCalendar = () => {
 		  >${calendar.events[3].summary}</a>
 		</div>
 		  `;
-	} 
-
-	lists = CONFIG.firstlistsContainer;
-		item = item + `
-	<div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
-	  <i class="listIcon" icon-name="${lists[1].icon}"></i>
-	  <a
-	  target="${CONFIG.openInNewTab ? '_blank' : ''}"
-	  href="${lists[1].links[0].link}"
-	  class="listItem"
-	  >${lists[1].links[0].name}</a>
-	  <a
-	  target="${CONFIG.openInNewTab ? '_blank' : ''}"
-	  href="${lists[1].links[1].link}"
-	  class="listItem"
-	  >${lists[1].links[1].name}</a>
-	  <a
-	  target="${CONFIG.openInNewTab ? '_blank' : ''}"
-	  href="${lists[1].links[2].link}"
-	  class="listItem"
-	  >${lists[1].links[2].name}</a>
-	  <a
-	  target="${CONFIG.openInNewTab ? '_blank' : ''}"
-	  href="${lists[1].links[3].link}"
-	  class="listItem"
-	  >${lists[1].links[3].name}</a>
-	</div>
-      `;
 		const position = 'beforeend';
 		lists_1.insertAdjacentHTML(position, item);
 };
