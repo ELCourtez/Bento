@@ -1,7 +1,13 @@
 /**/
-getCalendar();
 const my_events = {};
-function getCalendar(latitude, longitude) {
+setCalendar();
+
+function setcalendar() {
+	getCalendar(CONFIG.defaultLatitude, CONFIG.defaultLongitude);
+	return;
+}
+
+function getCalendar() {
             var myHeaders = new Headers();
 	    const key = `${CONFIG.calendarKey}`;
 	    const uri = `${CONFIG.calendarURI}`;
