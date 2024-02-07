@@ -46,7 +46,7 @@ function getCalendar() {
 		vtodos.forEach(function (item) {
 			my_todos[j]=[];
 			item[1].forEach(function(variable){
-				if(variable[0] === 'summary' || variable[0] === 'created'){
+				if(variable[0] === 'summary' || variable[0] === 'created' || variable[0] === 'uid' || variable[0] === 'related-to' || variable[0] === 'priority'){
 					my_todos[j][variable[0]]=variable[3];
 				}
 			});
