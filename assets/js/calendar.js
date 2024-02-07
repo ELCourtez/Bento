@@ -61,7 +61,11 @@ function getCalendar() {
 	.then(function(){
 		if(CONFIG.bentoLayout === 'bentocalendar'){
 			generateFirstListsContainerCalendar();
+			lucide.createIcons();
 		}
+	})
+	.then(function(){
+		lucide.createIcons();
 	});
 }
 
