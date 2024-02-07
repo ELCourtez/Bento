@@ -89,7 +89,7 @@ const generateFirstListsContainerCalendar = () => {
 	} 
 
 	lists = CONFIG.firstlistsContainer;
-		let item = item + `
+		item = item + `
 	<div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
 	  <i class="listIcon" icon-name="${lists[1].icon}"></i>
 	  <a
