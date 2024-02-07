@@ -68,7 +68,7 @@ function getCalendar() {
 
 const generateFirstListsContainerCalendar = () => {
 	let item =`
-		<div class="card list list__1" id="list_1">
+		<div class="agenda card list list__1" id="list_1">
 		<i class="listIcon" icon-name="calendar"></i>`;
   		for(let i = 0; i < 4; i++){
 			item = item + `<a style="display:flex;"
