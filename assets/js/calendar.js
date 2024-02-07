@@ -69,27 +69,14 @@ function getCalendar() {
 const generateFirstListsContainerCalendar = () => {
 	let item =`
 		<div class="card list list__1" id="list_1">
-		<i class="listIcon" icon-name="calendar"></i>
-		<a
-		target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		href="#"
-		class="listItem"
-		><span>${(new Date(calendar.events[0].dtstart)).getDate()}/${(new Date(calendar.events[0].dtstart)).getMonth()}</span><span>${calendar.events[0].summary}</span></a>
-		<a
-		target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		href="#"
-		class="listItem"
-		><span>${(new Date(calendar.events[1].dtstart)).getDate()}/${(new Date(calendar.events[1].dtstart)).getMonth()}</span><span>${calendar.events[1].summary}</span></a>
-		<a
-		target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		href="#"
-		class="listItem"
-		><span>${(new Date(calendar.events[2].dtstart)).getDate()}/${(new Date(calendar.events[2].dtstart)).getMonth()}</span><span>${calendar.events[2].summary}</span></a>
-		<a
-		target="${CONFIG.openInNewTab ? '_blank' : ''}"
-		href="#"
-		class="listItem"
-		><span>${(new Date(calendar.events[3].dtstart)).getDate()}/${(new Date(calendar.events[3].dtstart)).getMonth()}</span><span>${calendar.events[3].summary}</span></a>
+		<i class="listIcon" icon-name="calendar"></i>`;
+  		for(let i = 0; i < 4; i++){
+			item=`<a
+			target="${CONFIG.openInNewTab ? '_blank' : ''}"
+			href="#"
+			class="listItem"
+			><span>${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span><span>${calendar.events[i].summary}</span></a>`;
+  		}
 		</div>
 	`;
 	const position = 'beforeend';
