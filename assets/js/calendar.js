@@ -24,10 +24,7 @@ function getCalendar() {
 	})
 	.then(function(data) {
 		let vevents = data[2].filter(element => element[0] === 'vevent' );
-		let vtodos = data[2].filter(element => element[0] === 'vtodo' );
-		console.log(vtodos);
 		let my_events = [];
-		let my_todos = [];
 		let i = 0;
 		vevents.forEach(function (item) {
 			my_events[i]=[];
@@ -37,10 +34,28 @@ function getCalendar() {
 				}
 			});
 			i = i+1;
-		});
+		});	
 		my_events = my_events.filter(element => Date.parse(element['dtstart']) > Date.now());
 		my_events = my_events.sort((alement, blement) => Date.parse(alement['dtstart']) - Date.parse(blement['dtstart']));
 		calendar.events = my_events;
+
+		let vtodos = data[2].filter(element => element[0] === 'vtodo' );
+		let my_todos = [];		
+		console.log(vtodos);
+		let j = 0;
+		vtodos.forEach(function (item) {
+			my_todos[j]=[];
+			item[1].forEach(function(variable){
+				if(variable[0] === 'summary' || variable[0] === 'created'){
+					my_todos[j][variable[0]]=variable[3];
+				}
+			});
+			j = j+1;
+		});
+		my_todos = my_events.filter(element => Date.parse(element['created']) > Date.now());
+		my_todos = my_events.sort((alement, blement) => Date.parse(alement['created']) - Date.parse(blement['created']));
+		calendar.todos = my_todos;
+		console.log(calendar);
 	})
 	.then(function(){
 		if(CONFIG.bentoLayout === 'bentocalendar'){
