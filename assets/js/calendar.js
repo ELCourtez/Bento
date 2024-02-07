@@ -71,11 +71,11 @@ const generateFirstListsContainerCalendar = () => {
 		<div class="card list list__1" id="list_1">
 		<i class="listIcon" icon-name="calendar"></i>`;
   		for(let i = 0; i < 4; i++){
-			item = item + `<a
+			item = item + `<a style="display:flex;"
 			target="${CONFIG.openInNewTab ? '_blank' : ''}"
 			href="#"
 			class="listItem"
-			><span>${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span><span>${calendar.events[i].summary}</span></a>`;
+			><span style="padding-right:5px;">${(new Date(calendar.events[i].dtstart)).getDate()}/${(new Date(calendar.events[i].dtstart)).getMonth()}</span><span>${calendar.events[i].summary}</span></a>`;
   		}
 		item = item + `</div>
 	`;
