@@ -14,10 +14,6 @@ const generateLayout = () => {
     <div class="listsContainer" id="lists_1"></div>
   `;
 
-	let firstListsContainerCalendar = `
-    <div class="listsContainer" id="listscal_1"></div>
-  `;
-
 	let secondListsContainer = `
     <div class="listsContainer" id="lists_2"></div>
   `;
@@ -33,7 +29,7 @@ const generateLayout = () => {
 			break;
 		case 'bentocalendar':
 			linksBlockLeft.insertAdjacentHTML(position, firstButtonsContainer);
-			linksBlockRight.insertAdjacentHTML(position, firstListsContainerCalendar);
+			linksBlockRight.insertAdjacentHTML(position, firstListsContainer);
 			linksBlock.classList.remove('reduceGap');
 			linksBlock.classList.remove('removeGap');
 			break;
