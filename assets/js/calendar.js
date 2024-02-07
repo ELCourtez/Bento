@@ -74,7 +74,7 @@ const generateFirstListsContainerCalendar = () => {
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="#"
 		class="listItem"
-		>${calendar.events[0].dtstart} ${calendar.events[0].summary}</a>
+		>${Date.parse(calendar.events[0].dtstart).getMonth()} ${calendar.events[0].summary}</a>
 		<a
 		target="${CONFIG.openInNewTab ? '_blank' : ''}"
 		href="#"
