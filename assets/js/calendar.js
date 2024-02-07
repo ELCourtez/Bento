@@ -3,7 +3,7 @@ const calendar = {};
 setCalendar();
 
 function setCalendar() {
-	getCalendar(CONFIG.defaultLatitude, CONFIG.defaultLongitude);
+	getCalendar();
 	return;
 }
 
