@@ -44,6 +44,9 @@ const generateButtons = () => {
 		case 'bento':
 			generateFirstButtonsContainer();
 			break;
+		case 'bentocalendar':
+			generateFirstButtonsContainer();
+			break;			
 		case 'buttons':
 			generateFirstButtonsContainer();
 			generateSecondButtonsContainer();
