@@ -88,7 +88,7 @@ const generateFirstListsContainerCalendar = () => {
 	const position = 'beforeend';
 	lists_1.insertAdjacentHTML(position, item);
 	
-	lists = CONFIG.firstlistsContainer;
+	/*lists = CONFIG.firstlistsContainer;
 	let item2 = `
 		<div class="card list list__${lists[1].id}" id="list_${lists[1].id}">
 		<i class="listIcon" data-lucide="${lists[1].icon}"></i>
@@ -114,5 +114,20 @@ const generateFirstListsContainerCalendar = () => {
 		>${lists[1].links[3].name}</a>
 		</div>
 	`;
+	lists_1.insertAdjacentHTML(position, item2);*/
+	let item2 =`
+		<div class="agenda card list list__1" id="list_1">
+		<i class="listIcon" data-lucide="calendar"></i>`;
+  		for(let i = 0; i < 4; i++){
+			item2 = item2 + `<a style="display:flex;"
+			target="${CONFIG.openInNewTab ? '_blank' : ''}"
+			href="#"
+			class="listItem">
+				<span class="event-name">${(calendar.todos[i].summary).substring(0, 20)}</span>
+      		</a>`;
+  		}
+		item2 = item2 + `</div>
+	`;
+	const position = 'beforeend';
 	lists_1.insertAdjacentHTML(position, item2);
 };
